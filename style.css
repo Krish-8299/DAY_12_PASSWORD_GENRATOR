@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.password-box h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.password-box p {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.output-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.output-box input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    color: #222;
+    font-weight: 600;
+}
+
+.output-box button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #00e676;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.output-box button:hover {
+    transform: scale(1.03);
+}
+
+.setting {
+    margin-bottom: 18px;
+}
+
+.setting label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #00e676;
+}
+
+.checkbox-group {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.checkbox-group label {
+    background: rgba(255,255,255,0.12);
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.checkbox-group label:hover {
+    background: rgba(255,255,255,0.22);
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+.strength-box {
+    margin-bottom: 20px;
+}
+
+.strength-box label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.strength-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+#strengthFill {
+    height: 100%;
+    width: 50%;
+    background: yellow;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+#strengthText {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+@media(max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        height: 96vh;
+    }
+
+    .password-box {
+        padding: 18px;
+    }
+
+    .password-box h1 {
+        font-size: 24px;
+    }
+
+    .output-box {
+        flex-direction: column;
+    }
+
+    .output-box button {
+        width: 100%;
+    }
+}

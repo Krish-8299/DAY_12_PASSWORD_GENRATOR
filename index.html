@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="password-box">
+            <h1>🔐 Advanced Password Generator</h1>
+            <p>Create strong, secure & colorful passwords instantly</p>
+
+            <div class="output-box">
+                <input type="text" id="password" placeholder="Your Password" readonly>
+                <button id="copyBtn">Copy</button>
+            </div>
+
+            <div class="settings">
+
+                <div class="setting">
+                    <label>Password Length: <span id="lengthValue">12</span></label>
+                    <input type="range" id="length" min="6" max="30" value="12">
+                </div>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="uppercase" checked> Uppercase Letters</label>
+                    <label><input type="checkbox" id="lowercase" checked> Lowercase Letters</label>
+                    <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                    <label><input type="checkbox" id="symbols" checked> Symbols</label>
+                </div>
+
+                <div class="strength-box">
+                    <label>Password Strength:</label>
+                    <div class="strength-bar">
+                        <div id="strengthFill"></div>
+                    </div>
+                    <span id="strengthText">Medium</span>
+                </div>
+
+                <button class="generate-btn" id="generateBtn">
+                    Generate Password
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
